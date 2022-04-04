@@ -1,0 +1,71 @@
+{
+    "scenarios": [{
+            "ID": "HOME",
+            "Title": "SoTableStub",
+            "Description": "A generic and responsive tool for the visualization of tabular data",
+            "private": true,
+            "services": [{
+                "ID": "SoTableStub",
+                "Name": "SoTableStub",
+                "Description": "List of all my scenarios",
+                "URL": ".\\Services\\MyScenarios.php",
+                "table_options": {
+                    "responsive": true,
+                    "pageLength": 50,
+                    "order": [
+                        [0, "asc"]
+                    ]
+                }
+            }]
+        },
+        {
+            "ID": "Empty",
+            "Title": "Empty",
+            "Description": "Empty",
+            "services": []
+        },
+        {
+            "ID": "Failure",
+            "Title": "Failure",
+            "Description": "Failure",
+            "services": [{
+                "ID": "Failure",
+                "Name": "Failure",
+                "Description": "Failure",
+                "URL": ".\/Services\/getFailure.php"
+            }]
+        },
+        {
+            "ID": "ONT_Events",
+            "Title": "ONT Events",
+            "Description": "Last events located by ONT",
+            "options": {
+                "showCurrentTimeUTC": true,
+                "refreshInterval": 60
+            },
+            "services": [{
+                "ID": "Events",
+                "Name": "Events",
+                "Description": "Events",
+                "URL": "http://webservices.rm.ingv.it/fdsnws/event/1/query?format=text",
+                "dataType": "text",
+                "textSeparator": "|"
+            }]
+        },
+        {
+            "ID": "ONT_Events_by_proxy",
+            "Title": "ONT Events",
+            "Description": "Last events located by ONT",
+            "options": {
+                "showCurrentTimeUTC": true,
+                "refreshInterval": 60
+            },
+            "services": [{
+                "ID": "Events",
+                "Name": "Events",
+                "Description": "Events",
+                "URL": ".\/Services\/proxy_events_by_curl_custom_view.php"
+            }]
+        }
+    ]
+}

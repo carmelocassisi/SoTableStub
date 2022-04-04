@@ -1,0 +1,62 @@
+.container-fluid {
+    padding: 0;
+}
+
+.homeTitle {
+    color: #aaa;
+}
+
+a#home-link,
+a#home-link:hover,
+a#home-link:focus,
+a#home-link:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1.header>.subtitle {
+    margin-top: 0.5em;
+}
+
+h1.header>.header-info {
+    margin-top: 0.5em;
+}
+
+
+/* header-info link */
+
+h1.header>div.header-info>a {
+    text-decoration: none;
+}
+
+
+/* unvisited link */
+
+h1.header>div.header-info>a:link {
+    color: cyan;
+}
+
+
+/* visited link */
+
+h1.header>div.header-info>a:visited {
+    color: green;
+}
+
+
+/* mouse over link */
+
+h1.header>div.header-info>a:hover {
+    color: hotpink;
+}
+
+
+/* selected link */
+
+h1.header>div.header-info>a:active {
+    color: blue;
+}
+
+.main {
+    padding: 20px;
+}

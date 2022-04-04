@@ -1,0 +1,101 @@
+{
+    "$id": "http://[myWebServerAddress]/SoTableStub/schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Scenarios",
+    "description": "The configuration file schema for SoTableStub",
+    "type": "object",
+    "required": ["scenarios"],
+    "properties": {
+        "scenarios": {
+            "type": "array",
+            "description": "The list of scenarios.",
+            "items": { "$ref": "#/$defs/Scenario" },
+            "uniqueItems": true
+        }
+    },
+    "$defs": {
+        "Scenario": {
+            "type": "object",
+            "required": ["ID", "Title", "services"],
+            "properties": {
+                "ID": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9_]+$",
+                    "description": "The identificative name of the scenario."
+                },
+                "Title": {
+                    "type": "string",
+                    "description": "The title of the scenario."
+                },
+                "Description": {
+                    "type": "string",
+                    "description": "The description of the scenario."
+                },
+                "private": {
+                    "type": "boolean",
+                    "description": "Set the scenario visible or not into main page."
+                },
+                "options": {
+                    "type": "object",
+                    "description": "Set options for the scenario.",
+                    "properties": {
+                        "makeTabs": {
+                            "type": "boolean",
+                            "description": "Show services table into a tabs structure."
+                        },
+                        "showCurrentTimeUTC": {
+                            "type": "boolean",
+                            "description": "Show data loading time in UTC."
+                        },
+                        "refreshInterval": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "description": "Enable a timer after which reload the page (in seconds)."
+                        }
+                    }
+                },
+                "services": {
+                    "type": "array",
+                    "description": "The list of scenarios' services.",
+                    "items": { "$ref": "#/$defs/Service" },
+                    "uniqueItems": true
+                }
+            }
+        },
+        "Service": {
+            "type": "object",
+            "required": ["ID", "Name"],
+            "properties": {
+                "ID": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9_]+$",
+                    "description": "The identificative name of the service."
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "The name of the service."
+                },
+                "Description": {
+                    "type": "string",
+                    "description": "The description of the service."
+                },
+                "URL": {
+                    "type": "string",
+                    "description": "The public URL of the service."
+                },
+                "dataType": {
+                    "type": "string",
+                    "description": "The type of the provided data (default JSON). Data can be separated values text."
+                },
+                "textSeparator": {
+                    "type": "string",
+                    "description": "If data is provided in the form of separated values text, with this attribute the manager can define the separator char (or text)."
+                },
+                "table_options": {
+                    "type": "object",
+                    "description": "Datatables options format."
+                }
+            }
+        }
+    }
+}
