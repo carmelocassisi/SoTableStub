@@ -19,6 +19,25 @@
             }]
         },
         {
+            "ID": "SO_Checker",
+            "Title": "SO Checker",
+            "Description": "Server checker output",
+            "options": {
+                "makeTabs": true
+            },
+            "services": [{
+                "ID": "SODiskChecker",
+                "Name": "Disk Checker output",
+                "Description": "Disk Checker output",
+                "URL": ".\\Services\\disk_free_space.json"
+            }, {
+                "ID": "SOPingChecker",
+                "Name": "Ping Checker output",
+                "Description": "Ping Checker output",
+                "URL": ".\\Services\\ping_check.json"
+            }]
+        },
+        {
             "ID": "Empty",
             "Title": "Empty",
             "Description": "Empty",

@@ -1,0 +1,52 @@
+[
+    {
+        "ComputerName":  "computername1",
+        "DeviceID":  "C:",
+        "TotalSpaceGB":  63.48,
+        "TotalSpaceMB":  65007,
+        "FreeSpaceGB":  26.3,
+        "FreeSpaceMB":  26927.11,
+        "thresholdMb":  2048,
+        "checkTime":  "2022-05-27 13:15:11"
+    },
+    {
+        "ComputerName":  "computername2",
+        "DeviceID":  "C:",
+        "TotalSpaceGB":  63.45,
+        "TotalSpaceMB":  64969,
+        "FreeSpaceGB":  27.65,
+        "FreeSpaceMB":  28312.25,
+        "thresholdMb":  2048,
+        "checkTime":  "2022-05-27 13:15:11"
+    },
+    {
+        "ComputerName":  "computername2",
+        "DeviceID":  "D:",
+        "TotalSpaceGB":  299.81,
+        "TotalSpaceMB":  307008,
+        "FreeSpaceGB":  233.8,
+        "FreeSpaceMB":  239414.17,
+        "thresholdMb":  2048,
+        "checkTime":  "2022-05-27 13:15:11"
+    },
+    {
+        "ComputerName":  "computername3",
+        "DeviceID":  "C:",
+        "TotalSpaceGB":  63.48,
+        "TotalSpaceMB":  65007,
+        "FreeSpaceGB":  42.66,
+        "FreeSpaceMB":  43686.36,
+        "thresholdMb":  2048,
+        "checkTime":  "2022-05-27 13:15:11"
+    },
+    {
+        "ComputerName":  "computername3",
+        "DeviceID":  "D:",
+        "TotalSpaceGB":  199.87,
+        "TotalSpaceMB":  204670,
+        "FreeSpaceGB":  38.34,
+        "FreeSpaceMB":  39255.54,
+        "thresholdMb":  2048,
+        "checkTime":  "2022-05-27 13:15:11"
+    }
+]
