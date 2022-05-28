@@ -1,5 +1,5 @@
 <?php
-$url = "http://webservices.rm.ingv.it/fdsnws/event/1/query?format=text";
+$url = "http://webservices.rm.ingv.it/fdsnws/event/1/query?format=text&starttime=2022-03-03&endtime=2022-03-04";
 $col_sep = "|";
 
 // create curl resource
